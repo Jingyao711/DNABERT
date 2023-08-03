@@ -38,6 +38,8 @@ from torch.nn.utils.rnn import pad_sequence
 from torch.utils.data import DataLoader, Dataset, RandomSampler, SequentialSampler
 from torch.utils.data.distributed import DistributedSampler
 from tqdm import tqdm, trange
+from src.transformers import DNATokenizer 
+from transformers import BertModel, BertConfig
 
 from transformers import (
     WEIGHTS_NAME,
@@ -45,7 +47,6 @@ from transformers import (
     BertConfig,
     BertForMaskedLM,
     BertTokenizer,
-    DNATokenizer,
     CamembertConfig,
     CamembertForMaskedLM,
     CamembertTokenizer,
